@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+
+[project]
+name = "icechest"
+authors = [
+    {name = "Timothy Lee", email = "tim.heath.lee@gmail.com"}
+]
+description = "Backup program using AWS glacier"
+readme = "README.md"
+requires-python = ">3.11"
+keywords = ["backup", "AWS"]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "boto3"
+]
+dynamic = ["version"]
+
+[tool.pytest.ini_options]
+addopts = ""
+
+[project.scripts]
+my-script = "icechest.icechest:main"
